@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="favicon/png" href="/src/assets/faviicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Preconnect & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Prevent theme flash -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('portfolio-theme') || 'crimson-light';
+        document.documentElement.setAttribute('data-theme', t);
+        var l = localStorage.getItem('portfolio-lang') || 'en';
+        document.documentElement.setAttribute('lang', l);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- SEO Meta Tags -->
+  <title>Hariom Upadhyay | Full Stack & MERN Developer &amp; Data Analyst</title>
+  <meta name="title" content="Hariom Upadhyay | Full Stack Developer " />
+  <meta name="description"
+    content="Hariom Upadhyay is a Full StackDeveloper based in Azamgarh, Uttar Pradesh, India. Building responsive web applications, e-commerce platforms, and data-driven solutions using MongoDB, Express.js, React.js, Node.js, and Python." />
+  <meta name="keywords"
+    content="Hariom Upadhyay, Full Stack Developer, MERN and PERN Stack Developer, Data Analyst, React Developer, Node.js Developer, Web Developer Azamgarh, Web Developer India, Frontend Developer, UI UX Designer" />
+  <meta name="author" content="Hariom Upadhyay" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Hariom Upadhyay | Full Stack, MERN & PERN Developer " />
+  <meta property="og:description"
+    content="Full Stack, MERN & PERN Stack Developer building responsive web applications." />
+  <meta property="og:image" content="/og-image.jpg" />
+  <meta property="og:image:alt" content="Hariom Upadhyay - Full Stack Developer Portfolio" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hariom Upadhyay | Full Stack, MERN & PERN Developer " />
+  <meta name="twitter:description"
+    content="Full Stack, MERN & PERN Stack Developer building responsive web applications." />
+  <meta name="twitter:image" content="/og-image.jpg" />
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "Hariom Upadhyay",
+        "alternateName": ["Hariom", "Hariom Upadhyay"],
+        "jobTitle": "Full Stack, MERN & PERN Developer",
+        "description": "Full Stack, MERN & PERN Stack Developer specializing in MongoDB, Express.js, React.js, Node.js, Python, and Machine Learning.",
+        "sameAs": [
+          "https://github.com/hariiomupadhyay",
+          "https://www.linkedin.com/in/hariiomupadhyay",
+          "https://x.com/hariiomupadhyay",
+          "https://www.instagram.com/iam.hariiom"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Azamgarh",
+          "addressRegion": "Uttar Pradesh",
+          "addressCountry": "India"
+        },
+        "knowsAbout": [
+          "Full-Stack Development",
+          "MERN Stack",
+          "React",
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "JavaScript",
+          "Python",
+          "MySQL",
+          "REST API Development",
+          "UI/UX Design"
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

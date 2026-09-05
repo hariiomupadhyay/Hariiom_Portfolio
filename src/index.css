@@ -1,0 +1,330 @@
+@import "tailwindcss";
+
+@theme {
+  --font-tel: "Yellowtail", cursive;
+  --font-sans: 'JetBrains Mono', 'Courier New', monospace;
+  --font-display: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-brand-green: #0ea5e9;
+  --color-brand-emerald: #0284c7;
+  --color-theme-color: #38bdf8;
+}
+
+/* ==========Theme System =========== */
+
+:root {
+  --color-bg: #08090d;
+  --color-bg-card: #10131c;
+  --color-bg-surface: #161a26;
+  --color-bg-surface-2: #0b0d13;
+
+  --color-border: #22283a;
+  --color-border-strong: #333c54;
+
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #cbd5e1;
+  --color-text-tertiary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-text-faint: #475569;
+  --color-on-accent: #05070c;
+
+  --color-accent-soft: #7dd3fc;
+  --color-accent: #38bdf8;
+  --color-accent-strong: #0ea5e9;
+  --color-accent-deep: #0284c7;
+
+  --color-scheme: dark;
+}
+
+[data-theme="emerald-dark"] {
+  --color-bg: #09090b;
+  --color-bg-card: #121215;
+  --color-bg-surface: #18181c;
+  --color-bg-surface-2: #0c0c0e;
+
+  --color-border: #27272a;
+  --color-border-strong: #3f3f46;
+
+  --color-text-primary: #f4f4f5;
+  --color-text-secondary: #d4d4d8;
+  --color-text-tertiary: #a1a1aa;
+  --color-text-muted: #71717a;
+  --color-text-faint: #52525b;
+  --color-on-accent: #09090b;
+
+  --color-accent-soft: #6ee7b7;
+  --color-accent: #34d399;
+  --color-accent-strong: #10b981;
+  --color-accent-deep: #059669;
+
+  --color-scheme: dark;
+}
+
+[data-theme="ocean-dark"] {
+  --color-bg: #08090d;
+  --color-bg-card: #10131c;
+  --color-bg-surface: #161a26;
+  --color-bg-surface-2: #0b0d13;
+
+  --color-border: #22283a;
+  --color-border-strong: #333c54;
+
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #cbd5e1;
+  --color-text-tertiary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-text-faint: #475569;
+  --color-on-accent: #05070c;
+
+  --color-accent-soft: #7dd3fc;
+  --color-accent: #38bdf8;
+  --color-accent-strong: #0ea5e9;
+  --color-accent-deep: #0284c7;
+
+  --color-scheme: dark;
+}
+
+[data-theme="violet-dark"] {
+  --color-bg: #0b0910;
+  --color-bg-card: #151019;
+  --color-bg-surface: #1c1522;
+  --color-bg-surface-2: #0e0b12;
+
+  --color-border: #2b2233;
+  --color-border-strong: #3d2f49;
+
+  --color-text-primary: #f4f2f7;
+  --color-text-secondary: #d6cfe0;
+  --color-text-tertiary: #a99fb8;
+  --color-text-muted: #7c7190;
+  --color-text-faint: #5a516b;
+  --color-on-accent: #0b0910;
+
+  --color-accent-soft: #c4b5fd;
+  --color-accent: #a78bfa;
+  --color-accent-strong: #8b5cf6;
+  --color-accent-deep: #7c3aed;
+
+  --color-scheme: dark;
+}
+
+[data-theme="sunset-dark"] {
+  --color-bg: #0c0906;
+  --color-bg-card: #17110b;
+  --color-bg-surface: #1f1710;
+  --color-bg-surface-2: #100c07;
+
+  --color-border: #322418;
+  --color-border-strong: #48331f;
+
+  --color-text-primary: #f7f2ec;
+  --color-text-secondary: #e0d2c3;
+  --color-text-tertiary: #b8a08a;
+  --color-text-muted: #8a7461;
+  --color-text-faint: #5f4f42;
+  --color-on-accent: #0c0906;
+
+  --color-accent-soft: #cf9e6a;
+  --color-accent: #be6c28;
+  --color-accent-strong: #94450c;
+  --color-accent-deep: #913707;
+
+  --color-scheme: dark;
+}
+
+[data-theme="crimson-light"] {
+  --color-bg: #ffffff;
+  --color-bg-card: #ffffff;
+  --color-bg-surface: #ffffff;
+  --color-bg-surface-2: #fdfbfb;
+
+  --color-border: #f1e4e4;
+  --color-border-strong: #e6cdcd;
+
+  --color-text-primary: #18181b;
+  --color-text-secondary: #3f3f46;
+  --color-text-tertiary: #52525b;
+  --color-text-muted: #71717a;
+  --color-text-faint: #a1a1aa;
+  --color-on-accent: #ffffff;
+
+  --color-accent-soft: #b33939;
+  --color-accent: #990000;
+  --color-accent-strong: #800020;
+  --color-accent-deep: #590016;
+
+  --color-scheme: light;
+}
+
+[data-theme="arctic-light"] {
+  --color-bg: #f6f8fa;
+  --color-bg-card: #f8fafc;
+  --color-bg-surface: #f1f5f9;
+  --color-bg-surface-2: #f6f8fa;
+
+  --color-border: #e2e8f0;
+  --color-border-strong: #cbd5e1;
+
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #334155;
+  --color-text-tertiary: #64748b;
+  --color-text-muted: #94a3b8;
+  --color-text-faint: #cbd5e1;
+  --color-on-accent: #ffffff;
+
+  --color-accent-soft: #60a5fa;
+  --color-accent: #3b82f6;
+  --color-accent-strong: #2563eb;
+  --color-accent-deep: #1d4ed8;
+
+  --color-scheme: light;
+}
+
+[data-theme="mint-light"] {
+  --color-bg: #f5faf7;
+  --color-bg-card: #f7fdfa;
+  --color-bg-surface: #f0faf5;
+  --color-bg-surface-2: #f5faf7;
+
+  --color-border: #e0f2e9;
+  --color-border-strong: #c8e8d7;
+
+  --color-text-primary: #0f2419;
+  --color-text-secondary: #2d4a3a;
+  --color-text-tertiary: #5c7a6a;
+  --color-text-muted: #86a396;
+  --color-text-faint: #c8e8d7;
+  --color-on-accent: #ffffff;
+
+  --color-accent-soft: #34d399;
+  --color-accent: #10b981;
+  --color-accent-strong: #059669;
+  --color-accent-deep: #047857;
+
+  --color-scheme: light;
+}
+
+[data-theme="amber-light"] {
+  --color-bg: #fffdf9;
+  --color-bg-card: #fff9ee;
+  --color-bg-surface: #fef3dc;
+  --color-bg-surface-2: #fff9ee;
+
+  --color-border: #f3e3c3;
+  --color-border-strong: #e6cd9a;
+
+  --color-text-primary: #241a08;
+  --color-text-secondary: #4a3714;
+  --color-text-tertiary: #7a5f2f;
+  --color-text-muted: #a3874f;
+  --color-text-faint: #e6cd9a;
+  --color-on-accent: #ffffff;
+
+  --color-accent-soft: #fbbf24;
+  --color-accent: #d97706;
+  --color-accent-strong: #b45309;
+  --color-accent-deep: #92400e;
+
+  --color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  color-scheme: var(--color-scheme);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  cursor: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700; 
+  letter-spacing: -0.01em; 
+}
+
+/* Hide default cursor on desktop fine pointer devices */
+@media (pointer: fine) {
+  html, body, a, button, select, input, textarea, label, [role="button"] {
+    cursor: none !important;
+  }
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-strong);
+}
+
+/* Custom glow utility */
+.emerald-glow {
+  box-shadow: 0 0 35px -5px color-mix(in srgb, var(--color-accent-strong) 15%, transparent);
+}
+
+.emerald-glow-sm {
+  box-shadow: 0 0 15px -3px color-mix(in srgb, var(--color-accent-strong) 12%, transparent);
+}
+
+.card-gradient-border {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+}
+/* ========== Global Dynamic Theme Mapping ========== */
+@theme {
+  --color-brand-green: var(--color-accent);
+  --color-brand-emerald: var(--color-accent-strong);
+  --color-theme-color: var(--color-accent);
+}
+
+:root {
+  --color-accent-weak: var(--color-accent-soft);
+}
+
+html, body, #root { min-height: 100%; }
+* { border-color: var(--color-border); }
+
+/* Premium visual layer shared by every theme */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: .28;
+  background-image:
+    radial-gradient(circle at 15% 15%, color-mix(in srgb, var(--color-accent) 11%, transparent) 0, transparent 26rem),
+    radial-gradient(circle at 85% 20%, color-mix(in srgb, var(--color-accent-strong) 8%, transparent) 0, transparent 24rem),
+    linear-gradient(115deg, transparent 0%, color-mix(in srgb, var(--color-text-primary) 1.8%, transparent) 50%, transparent 100%);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-accent) 28%, transparent);
+  color: var(--color-text-primary);
+}

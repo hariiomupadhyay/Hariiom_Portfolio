@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Transparent Background Layer (Hidden) -->
+  <rect width="100%" height="100%" fill="none" opacity="0"/>
+
+  <defs>
+    <!-- Solid Black Gradient Shading -->
+    <linearGradient id="gradH1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+    <linearGradient id="gradH2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+    <linearGradient id="gradU1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+    <linearGradient id="gradU2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+    <linearGradient id="gradBridge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#glow)">
+    <!-- H - Left Vertical Segment -->
+    <path d="M 80 120 L 160 70 L 160 380 L 80 430 Z" fill="url(#gradH1)" />
+
+    <!-- H - Crossbar / Middle Angled Slash -->
+    <path d="M 160 210 L 230 160 L 230 260 L 160 310 Z" fill="url(#gradBridge)" />
+
+    <!-- Central Shared Pillar (Forms 'H' Right & 'U' Left) -->
+    <path d="M 230 110 L 300 60 L 300 370 L 230 420 Z" fill="url(#gradH2)" />
+
+    <!-- U - Bottom Angled Connector -->
+    <path d="M 300 320 L 370 270 L 370 370 L 300 420 Z" fill="url(#gradU1)" />
+
+    <!-- U - Right Vertical Segment -->
+    <path d="M 370 120 L 440 70 L 440 380 L 370 430 Z" fill="url(#gradU2)" />
+  </g>
+</svg>

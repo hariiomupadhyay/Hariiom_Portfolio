@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hariiomupadhyay.vercel.app/sitemap.xml
