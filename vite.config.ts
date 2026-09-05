@@ -27,7 +27,7 @@ const localApiPlugin = (): Plugin => ({
               const resend = new Resend(apiKey);
               const resendResult = await resend.emails.send({
                 from: "Portfolio Contact <onboarding@resend.dev>",
-                to: ["hariiom.dev@outlook.com"],
+                to: ["hariiomupadhyay@outlook.com"],
                 replyTo: data.email,
                 subject: `New Inquiry from ${data.name || "Visitor"} — ${data.serviceType || "Portfolio Contact"}`,
                 html: `
@@ -54,11 +54,12 @@ const localApiPlugin = (): Plugin => ({
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
             res.end(JSON.stringify({ success: true, message: "Local dev inquiry processed" }));
-          } catch (err: any) {
+          } catch (err: unknown) {
+            const errorMessage = err instanceof Error ? err.message : "Dev API Error";
             console.error("[Dev API Error]:", err);
             res.statusCode = 500;
             res.setHeader('Content-Type', 'application/json');
-            res.end(JSON.stringify({ error: err.message || "Dev API Error" }));
+            res.end(JSON.stringify({ error: errorMessage }));
           }
         });
         return;
